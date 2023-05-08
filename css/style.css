@@ -1,0 +1,179 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-style: 100%;
+	line-height: 1;
+	font-style: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style-type: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-style: inherit;
+	font-weight: 400;
+}
+
+body {
+	font-family: Montserrat;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 400;
+	height: 100%;
+	color: #fff;
+	background-color: #252B42;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	flex: 1 1 100%;
+	overflow: hidden;
+}
+
+._container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/*-----------------------Header---------------------*/
+.header {
+	min-height: 147px;
+	padding: 30px 0;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.header__container {
+}
+.header__top {
+	display: flex;
+	justify-content: space-between;
+}
+.top-header {
+	margin: 0 0 20px 0;
+}
+.top-header__address,
+.top-header__telephone {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 150%;
+}
+ 
+.header__bottom {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.bottom-header {
+}
+.bottom-header__menu {
+}
+.menu {
+}
+.menu__list {
+	display: flex;
+	justify-content: space-around;
+}
+.menu__item {
+	flex: 0 1 25%;
+	padding: 11px 0 15px 0;	
+	text-align: center;
+}
+.menu__item:not(:last-child) {
+	border-right: 1px solid #fff;
+}
+.menu__link {
+	display: block;
+	line-height: 150%;
+	color: #fff;
+}
+
+@media(max-width: 441px) {
+	.header__top {
+		flex-wrap: wrap;
+	}
+	.top-header__address {
+		margin-bottom: 10px;
+	}
+	.menu__list {
+		flex-wrap: wrap;
+	}
+	.menu__item {
+		flex: 0 1 50%;
+	}
+	.menu__item:first-child,
+	.menu__item:nth-child(2) {
+		border-bottom: 1px solid #fff;
+	}
+
+	.menu__item:nth-child(2) {
+		border-right: none;
+	}
+}
