@@ -194,6 +194,8 @@ body {
 .page {
 	flex: 1 1 100%;
 }
+.page__best {
+}
 /*-----------------------Main block---------------------*/
 .page__main-block {
 }
@@ -269,4 +271,59 @@ body {
 	.body__btn:not(:last-child) {
 		margin: 0 30px 15px 0;
 	}
+}
+/*--------------Best------------------*/
+
+.best {
+	background-color: #282828;
+	padding: 100px 0;
+}
+.best__container {
+}
+
+.best__body {
+	border: 1px solid #C4C4C4;
+	padding: 60px 186px;
+}
+.body-best {
+	text-align: center;
+}
+.body-best__title {
+	font-family: 'Playfair Display';
+	font-size: 36px;
+	line-height: 150%;	
+	padding: 0 0 40px 0;	
+	position: relative;
+}
+
+.body-best__line {
+	width: 160px;
+	height: 1px;
+	margin: 0 auto;
+	background-color: #C4C4C4;
+}
+
+.body-best__text {	
+	padding: 40px 0 0 0;
+	line-height: 150%;
+	margin: 0 0 50px 0;
+}
+
+.body-best__image {
+}
+
+@media(max-width: 745px) {
+	.best {
+		padding: 50px 0;
+	}
+	.best__body {
+		padding: 60px 45px;
+	}
+}
+
+@media(max-width: 447px) {
+	.body-best__title {		
+		font-size: 32px;
+		line-height: 135%;		
+  }
 }
