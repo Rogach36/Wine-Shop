@@ -139,7 +139,7 @@ body {
 	font-size: 13px;
 	line-height: 150%;
 }
- 
+
 .header__bottom {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
@@ -162,11 +162,29 @@ body {
 .menu__item:not(:last-child) {
 	border-right: 1px solid #fff;
 }
+
 .menu__link {
-	display: block;
+	display: inline-block;
 	line-height: 150%;
-	color: #fff;
+	color: #fff;	
+	position: relative;
 }
+
+.menu__link:after {
+	display: block;
+	content: "";
+	position: absolute;	
+	background-color: #fff;
+	height: 2px;
+	width: 0;
+	left: 50%;	
+	}
+
+.menu__link:hover:after {
+	width: 100%;
+	transition: width .2s ease-in-out;
+	transform: translateX(-50%);
+	}
 
 @media(max-width: 441px) {
 	.header__top {
@@ -733,9 +751,28 @@ input {
 }
 
 .nav-footer__link {
+	display: inline-block;
 	font-size: 14px;
 	color: inherit;
+	position: relative;
 }
+
+.nav-footer__link::after {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 1px;
+	background-color: #fff;
+	left: 50%;
+} 
+
+.nav-footer__link:hover::after {
+	width: 100%;
+	transition: width .2s ease-in-out;
+	transform: translateX(-50%);
+}
+
 .footer__bottom {
 	border-bottom: 1px solid #fff;
 }
@@ -753,11 +790,40 @@ input {
 	justify-content: center;
 	align-items: center;
 	padding: 0 55px;
-	min-height: 60px;
+	min-height: 60px;	
 }
 .bottom-row__column:not(:last-child) {
 	border-right: 1px solid #fff;
 }
+
+
+
+.bottom-row__link {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	position: relative;
+}
+
+.bottom-row__link::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 1px;
+	background-color: #fff;
+	left: 50%;
+	display: block;
+}
+
+.bottom-row__link:hover::after {
+	width: 100%;
+	transform: translateX(-50%);
+	transition: width .2s ease-in-out;
+}
+
 .column {
 	
 }
@@ -767,12 +833,31 @@ input {
 .column__item {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center;	
+	
 }
+
 .column__item:not(:last-child) {
 	margin: 0 35px 0 0;
 }
 .column__link {
+	display: inline-block;	
+	position: relative;
+}
+.column__link::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 0;
+	height: 1px;
+	left: 50%;
+	background-color: #fff;
+}
+
+.column__link:hover::after {
+	width: 100%;
+	transform: translateX(-50%);
+	transition: width .2s ease-in-out;
 }
 
 @media(max-width: 1084px) {
